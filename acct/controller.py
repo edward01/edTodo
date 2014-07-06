@@ -21,8 +21,9 @@ def login_post():
 
     if user:
         session['username'] = user['user_name']
+        user_id = int(user['user_id'])
         flash('Login successful')
-        return redirect(url_for('main.index', user_id=user['user_id']))
+        return redirect(url_for('main.index', user_id=user_id))
     else:
         flash('Access Denied')
         return redirect(url_for('.login'))
