@@ -3,6 +3,7 @@ from flask import Blueprint, render_template, session, current_app as app
 
 main_app = Blueprint('main', __name__, url_prefix='/main')
 
+
 @main_app.route('/<user_id>')
 def index(user_id):
     print 'index'

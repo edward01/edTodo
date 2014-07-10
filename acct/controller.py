@@ -8,6 +8,7 @@ acct_app = Blueprint('acct', __name__)
 def login():
     return render_template('acct/login.html')
 
+
 @acct_app.route('/', methods=['POST'])
 def login_post():
     username = request.form.get('txtName')
@@ -32,6 +33,7 @@ def login_post():
 @acct_app.route('/register')
 def register():
     return render_template('acct/register.html')
+
 
 @acct_app.route('/register', methods=['POST'])
 def register_post():
