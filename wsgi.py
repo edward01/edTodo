@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 from flask import Flask, render_template, redirect, url_for, request
-from acct.controller import acct_app
-from main.controller import main_app
-from todo.controller import todo_app
+from acct import acct_app
+from main import main_app
+from todo import todo_app
 from config import db_config
 import pymongo_safe
 
